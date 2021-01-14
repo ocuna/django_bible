@@ -5,7 +5,8 @@ from bible_api.models import BRB_Verses
 
 @admin.register(BRB_Verses)
 class BRB_VersesAdmin(ImportExportModelAdmin):
-	list_display = ('bcvCode','book','verseNumber','chapterNumber','verse')
+	# list_display = ('bcvCode','book','verseNumber','chapterNumber','verse')
+	# list_display = ('verseSumNumber','book','chapterNumber','verseNumber','verse')
 	pass
 
 # Register your models here.
