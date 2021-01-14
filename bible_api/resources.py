@@ -1,6 +1,6 @@
 from import_export import resources
-from bible_api import BRBverses
+from bible_api import BRB_Verses
 
-class BRBversesResource(resources.ModelResource):
+class BRB_VersesResource(resources.ModelResource):
 	class Meta:
-		model = BRBverses
+		model = BRB_Verses
