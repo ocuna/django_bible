@@ -47,6 +47,7 @@ INSTALLED_APPS = [
     # also resourced this: https://django-import-export.readthedocs.io/en/latest/getting_started.html
     'import_export',
     'bible_api',
+    'rest_framework',
 ]
 
 MIDDLEWARE = [
