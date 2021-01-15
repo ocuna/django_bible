@@ -16,7 +16,7 @@ class BRB_Verses(models.Model):
 		verbose_name_plural = 'BRB Verses'
 		ordering = ['verseSumNumber']
 
-	def __str__(self):
+	def __str__(self):	
 		prefix = str(self.verseSumNumber) + " | " + self.book + " " + str(self.chapterNumber) + ":" + str(self.verseNumber)
 		suffix = textwrap.shorten(self.verse, width=100, placeholder="...")
 		return prefix + " | " + suffix   
