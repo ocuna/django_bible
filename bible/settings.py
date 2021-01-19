@@ -11,6 +11,10 @@ https://docs.djangoproject.com/en/3.1/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/3.1/ref/settings/
 """
+# stuff for heroku
+import django_heroku
+from decouple import config
+import dj_database_url
 
 from pathlib import Path
 
@@ -24,7 +28,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # yea, you can't see the topsecret.py key file ... it's in git.ignore
 import topsecret
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = topsecret.keys['SECRET_KEY']
+SECRET_KEY = config('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
