@@ -1,0 +1,17 @@
+{
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			"path": "..\\venv\\Lib\\site-packages\\django"
+		},
+		{
+			"path": "..\\venv\\Lib\\site-packages\\django_extensions"
+		},
+		{
+			"path": "..\\venv\\Lib\\site-packages\\rest_framework"
+		}
+	],
+	"settings": {}
+}
