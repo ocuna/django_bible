@@ -4,8 +4,7 @@ from rest_framework import routers
 from rest_framework.urlpatterns import format_suffix_patterns
 from . apirouters import BCV_Lookup
 
-router = routers.SimpleRouter()
-
+router = routers.DefaultRouter()
 router.register('brb_verses', views.BRB_Verses_View)
 
 # router.register('^verses/{limit}/$', views.verses_list_limit,'brb_verses')
@@ -18,7 +17,5 @@ router.register('brb_verses', views.BRB_Verses_View)
 urlpatterns = [
     path('', views.home, name='home'),
     path('brb/<slug:book>/<int:chapter>/<slug:range>/', views.brb ),
+    path('',include(router.urls))
 ]
-
-# urlpatterns = format_suffix_patterns(router.urls) + format_suffix_patterns(book_router.urls)
-
