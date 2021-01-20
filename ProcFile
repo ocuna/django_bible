@@ -1,0 +1,2 @@
+web: gunicorn django_bible.wsgi
+python manage.py collectstatic --noinput;
