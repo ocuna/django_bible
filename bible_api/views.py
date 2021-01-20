@@ -14,7 +14,7 @@ from . serializers import BRB_Verses_Serializer
 def home(request):
 
     context = {
-        'test': models.Model.__dict__
+        'test': 'test Variable'
     }
 
     return render(request, 'home.html', context)
