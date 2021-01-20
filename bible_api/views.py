@@ -14,7 +14,7 @@ from . serializers import BRB_Verses_Serializer
 def home(request):
 
     context = {
-        'test': 'test Variable'
+        'test': '<A href="/brb_verses/">Sure, just destroy the DB ok?</a>'
     }
 
     return render(request, 'home.html', context)
