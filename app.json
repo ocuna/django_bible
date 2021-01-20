@@ -1,6 +1,6 @@
 {
-  "name": "Django Bible Test App ~ Beta",
-  "description": "Simply trying to deploy this.",
+  "name": "Bible App - BETA",
+  "description": "Trying to get Heroku to work",
   "image": "heroku/python",
   "repository": "https://github.com/ocuna/django_bible",
   "keywords": ["python", "django" ],
