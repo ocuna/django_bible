@@ -136,11 +136,11 @@ IMPORT_EXPORT_USE_TRANSACTIONS = True
 
 STATIC_URL = '/static/'
 
-STATIC_ROOT = BASE_DIR / '/static_files/'
+STATIC_ROOT = BASE_DIR / '/staticfiles/'
 
 STATICFILES_DIRS = [
     BASE_DIR / "static",
-    BASE_DIR / "static_files",
+    BASE_DIR / "staticfiles",
 ]
 
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
