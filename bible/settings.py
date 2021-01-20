@@ -13,7 +13,7 @@ https://docs.djangoproject.com/en/3.1/ref/settings/
 """
 # stuff for heroku
 import django_heroku
-from decouple import config
+from decouple import Config
 import dj_database_url
 
 from pathlib import Path
@@ -27,10 +27,10 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 # SECURITY WARNING: keep the secret key used in production secret!
 # Import Secret Keys
-SECRET_KEY = config('SECRET_KEY')
+SECRET_KEY = Config('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = Config('DEBUG')
 
 ALLOWED_HOSTS = []
 
