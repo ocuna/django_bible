@@ -90,10 +90,21 @@ WSGI_APPLICATION = 'bible.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
     }
 }
+
+"""
+'default': {
+    'ENGINE': 'django.db.backends.sqlite3',
+    'NAME': BASE_DIR / 'db.sqlite3',
+}
+"""
+
+DATABASES['default'] = dj_database_url.config(default='postgres://rkrbxadwnlnqsq:f7660f23fc972749daf99605303a9ef7619771419e0e27e49dbac14e3c5b74f0@ec2-54-225-18-166.compute-1.amazonaws.com:5432/d1q8n62eoe4pg4')
+
+db_from_env = dj_database_url.config(conn_max_age=600)
+DATABASES['default'].update(db_from_env)
 
 
 # Password validation
