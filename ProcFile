@@ -1,1 +1,2 @@
 web: gunicorn django_bible.wsgi
+heroku ps:scale web=1
